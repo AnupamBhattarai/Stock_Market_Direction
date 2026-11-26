@@ -21,4 +21,5 @@ Direction	  A factor with levels Down and Up indicating whether the market had
             
 Outputs and plots:
 ![Barplot of Classification](barplot.png)
-![Histograms of Lag variables and Volume](histograms.png)
+![Histograms of Lag variables and Volume](histogram.png)
+
