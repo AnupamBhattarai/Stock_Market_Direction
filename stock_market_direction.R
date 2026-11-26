@@ -1,6 +1,5 @@
 # Stock Market Direction: Logistic Regression vs Decision Tree
 # Dataset: ISLR2::Smarket
-# Submitted by: Anupam Bhattarai, Darrel Primandaru, Si June Jun
 
 # loading necessary libraries
 library(caret)
@@ -23,32 +22,34 @@ table(Dat$Direction, useNA = "always")
 
 Dat <- na.omit(Dat)
 
-Dat$Direction <- factor(Dat$Direction,
-                        levels = c("Down", "Up"))
+Dat$Direction <- factor(Dat$Direction,levels = c("Down", "Up"))
 
 
 # class distribution
 
 table(Dat$Direction)
+# to convert frequencies into percentage (*100)
 prop.table(table(Dat$Direction)) * 100
 
+# visualising the class distribution
 barplot(table(Dat$Direction),
         xlab = "Market direction",
         ylab = "Frequency",
         main = "Class distribution")
 
 
-# 4. Distribution of the predictors
-# (these are continuous, so histograms instead of bar plots)
+# Distribution of the predictors
+# histograms to visualise the data
 
 par(mfrow = c(3, 2))
 
-hist(Dat$Lag1, xlab = "Lag1 (% return 1 day before)", main = "")
-hist(Dat$Lag2, xlab = "Lag2 (% return 2 days before)", main = "")
-hist(Dat$Lag3, xlab = "Lag3 (% return 3 days before)", main = "")
-hist(Dat$Lag4, xlab = "Lag4 (% return 4 days before)", main = "")
-hist(Dat$Lag5, xlab = "Lag5 (% return 5 days before)", main = "")
-hist(Dat$Volume, xlab = "Volume (billions of shares)", main = "")
+hist(Dat$Lag1, xlab = "Lag1 (% return for previous day)", main = "")
+hist(Dat$Lag2, xlab = "Lag2 (% return for 2 days previous)", main = "")
+hist(Dat$Lag3, xlab = "Lag3 (% return for 3 days previous)", main = "")
+hist(Dat$Lag4, xlab = "Lag4 (% return for 4 days previous)", main = "")
+hist(Dat$Lag5, xlab = "Lag5 (% return for 5 days previous)", main = "")
+hist(Dat$Volume, xlab = "Volume(number of daily shares traded in billions)", main = "")
+
 
 par(mfrow = c(1, 1))
 
