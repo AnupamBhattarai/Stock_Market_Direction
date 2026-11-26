@@ -2,3 +2,14 @@
 .Rhistory
 .RData
 .Ruserdata
+
+# macOS files
+.DS_Store
+
+# R files
+.Rhistory
+.RData
+.Ruserdata
+
+# RStudio files
+.Rproj.user/

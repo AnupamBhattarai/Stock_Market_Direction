@@ -105,3 +105,30 @@ The ROC curves compare the performance of both models across different classific
 ## 6. Conclusion
 
 Both models achieved the same validation accuracy of approximately 50.6%. Logistic Regression had higher sensitivity and a slightly higher AUC, while the Decision Tree had higher specificity. However, both models had AUC values close to 0.5, which indicates limited ability to distinguish between Up and Down market movements. Overall, neither model demonstrated strong predictive performance on the validation dataset.
+
+
+## Installation and Requirements
+
+This project was developed using R.
+
+The following packages are required:
+
+- ISLR2
+- caret
+- rpart
+- rpart.plot
+- pROC
+
+Install the required packages using:
+
+```r
+install.packages(c(
+  "ISLR2",
+  "caret",
+  "rpart",
+  "rpart.plot",
+  "pROC"
+))
+```
+
+After installing the packages, open the RStudio project and run `stock_market_direction.R`.
