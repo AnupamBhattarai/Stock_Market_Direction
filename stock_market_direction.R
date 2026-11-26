@@ -14,6 +14,7 @@ library(pROC)
 Dat <- ISLR2::Smarket
 
 dim(Dat)
+
 summary(Dat)
 
 
